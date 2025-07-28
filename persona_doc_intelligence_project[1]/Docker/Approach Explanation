@@ -1,0 +1,56 @@
+Approach Explanation
+
+Objective
+
+The goal of our system is to act as an intelligent document analyst that identifies, extracts, and ranks the most relevant sections and sub-sections from a set of documents, tailored to a specific **persona** and **job-to-be-done**. The system must be fast, CPU-efficient, and capable of generalizing across domains such as research, business, and education.
+
+Pipeline Overview
+
+Our solution is structured as a 5-stage pipeline:
+
+1.Document Parsing
+2.Persona & Job Understanding
+3.Section Extraction
+4.Relevance Ranking
+5.Sub-section Analysis
+
+1. Document Parsing
+
+Documents (PDFs) are processed using `PyMuPDF` for accurate page-wise text extraction, preserving structure like section headers and page numbers. Each page is scanned for section titles using heuristic rules (e.g., font size, formatting cues, heading patterns like “1. Introduction”).
+
+2. Persona & Job Understanding
+
+The persona and job description are embedded into a dense semantic vector using a lightweight transformer model from the `sentence-transformers` family. This helps capture not just keywords, but intent (e.g., “financial trend analysis” vs “benchmarking”).
+
+
+3. Section Extraction
+
+From the parsed text, we isolate section-level blocks using simple regex-based title parsing (e.g., headings, capitalized titles, numbered headings). Each section is stored with metadata: document name, page number, and content.
+
+
+4. Relevance Ranking
+
+Each extracted section is embedded using the same transformer model as used for persona+job. We compute cosine similarity between:
+- **(persona + job) vector** vs **section vector**
+
+Top-N matches are returned with importance rankings, ensuring that the most semantically relevant content is surfaced first.
+
+
+5. Sub-section Analysis
+
+To enable fine-grained extraction, each top-ranked section is broken into smaller paragraphs or bullet points. Each unit is re-ranked for relevance to provide refined context. This provides precision in surfacing datasets, methods, formulas, or trends — depending on the job.
+
+
+Optimization & Constraints
+
+- Model Size: We use a distilled BERT variant under 100MB.
+- CPU-Only:All embeddings and parsing are optimized for CPU runtime using NumPy and ONNX-compatible models.
+- Speed: For 3–5 documents, total processing time stays under 60 seconds.
+
+Generalization
+
+The system is domain-agnostic. Whether it’s scientific papers, financial reports, or textbooks, it relies on semantic similarity and document structure rather than hard-coded keywords, making it suitable for a wide range of personas and tasks.
+
+Summary
+
+Our pipeline connects "what matters" in the documents with "who matters" — the user — by intelligently selecting content that aligns with both their role and objective. It’s fast, scalable, and easy to adapt to any use case in document intelligence.

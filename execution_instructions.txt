@@ -1,0 +1,27 @@
+Execution Instructions
+
+Follow these steps to build and run the Docker container for the Persona-Driven Document Intelligence project.
+
+
+
+ Step 1: Build Docker Image
+
+From the root of the project directory, run:
+
+    docker build -t doc_intel .
+
+Step 2: Run the Container
+
+Mount the input and output folders and execute the main script:
+
+    docker run -v $(pwd)/sample_input:/app/sample_input \
+               -v $(pwd)/sample_output:/app/sample_output \
+               doc_intel
+
+This will run the pipeline on the sample_input PDFs and write the result to sample_output/challenge1b_output.json.
+
+ Notes
+
+- Ensure Docker is installed and running.
+- The process will finish within 60 seconds for 3–5 documents.
+- Output JSON will appear in the `sample_output/` folder.

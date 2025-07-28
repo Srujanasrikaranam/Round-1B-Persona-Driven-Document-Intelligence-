@@ -1,0 +1,9 @@
+#This will automatically download and save all required files in this structure:
+model/
+└── all-MiniLM-L6-v2/
+    ├── config.json
+    ├── pytorch_model.bin
+    ├── sentence_bert_config.json
+    ├── tokenizer_config.json
+    ├── vocab.txt
+    └── special_tokens_map.json

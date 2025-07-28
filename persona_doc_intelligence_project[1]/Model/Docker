@@ -1,0 +1,4 @@
+#offline and within Docker
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer('./model/all-MiniLM-L6-v2')

@@ -1,0 +1,46 @@
+{
+  "title": "CHAPTER 1 - INTRODUCTION TO ORGANIC CHEMISTRY",
+  "outline": [
+    { "level": "H1", "text": "1.1 Historical Background of Organic Chemistry", "page": 1 },
+    { "level": "H1", "text": "1.2 The Chemical Bond", "page": 2 },
+    { "level": "H2", "text": "1.2a Atomic Theory", "page": 2 },
+    { "level": "H2", "text": "1.2b Electronegativity", "page": 4 },
+    { "level": "H2", "text": "1.2c Bonding", "page": 4 },
+    { "level": "H1", "text": "1.3 Bonding in Carbon Compounds", "page": 6 },
+    { "level": "H1", "text": "1.4 Organic Structures", "page": 12 }
+  ],
+  "method": "structure_analysis"
+}
+
+
+{
+  "title": "An Introduction to Organic Chemistry",
+  "outline": [
+    { "level": "H1", "text": "Nomenclature", "page": 82 },
+    { "level": "H1", "text": "Empirical and Molecular Formulae", "page": 84 },
+    { "level": "H1", "text": "Structural and Isomerism Structural Formulae", "page": 87 },
+    { "level": "H2", "text": "Geometric isomerism", "page": 89 },
+    { "level": "H2", "text": "Optical isomerism", "page": 90 },
+    { "level": "H1", "text": "Hybridisation", "page": 92 },
+    { "level": "H1", "text": "Hydrocarbons", "page": 95 }
+  ],
+  "method": "structure_analysis"
+}
+
+{
+  "title": "Review of Organic Chem I",
+  "outline": [
+    { "level": "H1", "text": "Some Arrow-Pushing Guidelines", "page": 1 },
+    { "level": "H1", "text": "Reactive Intermediates: Stability Patterns", "page": 2 },
+    { "level": "H1", "text": "Stability/Reactivity/Selectivity Principles", "page": 3 },
+    { "level": "H1", "text": "Summary of Reaction Types", "page": 6 },
+    { "level": "H1", "text": "Comparing SN2 vs SN1 vs E2 vs E1", "page": 8 },
+    { "level": "H1", "text": "Structure and Synthesis of Alkenes", "page": 9 },
+    { "level": "H1", "text": "Reaction Mechanisms", "page": 10 },
+    { "level": "H1", "text": "Chapter 7 Reactions and Mechanisms, Review", "page": 11 },
+    { "level": "H1", "text": "Summary of Alkene Reactions, Ch. 8", "page": 12 },
+    { "level": "H1", "text": "Summary of Mechanisms, Ch. 7 + 8", "page": 14 },
+    { "level": "H1", "text": "Conjugated Systems", "page": 16 }
+  ],
+  "method": "structure_analysis"
+}
